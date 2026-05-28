@@ -1,0 +1,27 @@
+<mat-toolbar class="navbar">
+
+  <!-- LEFT MENU -->
+  <div class="nav-links">
+
+    <a routerLink="/" routerLinkActive="active" [routerLinkActiveOptions]="{ exact: true }">
+      Home
+    </a>
+
+    <a routerLink="/projects" routerLinkActive="active">
+      Projects
+    </a>
+
+    <div class="logo-center">
+      <img src="img.png" alt="Logo">
+    </div>
+
+
+  </div>
+
+</mat-toolbar>
+
+<div class="page">
+  <router-outlet></router-outlet>
+</div>
+
+<app-footer></app-footer>

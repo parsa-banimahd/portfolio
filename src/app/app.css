@@ -1,0 +1,220 @@
+html, body {
+  margin: 0;
+  background: #0f172a;
+  font-family: Roboto, sans-serif;
+}
+
+/* =========================
+   NAVBAR
+========================= */
+
+.navbar {
+  position: fixed;
+
+  top: 0;
+  left: 0;
+  right: 0;
+
+  height: 70px;
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  padding: 0 40px;
+
+  z-index: 1000;
+
+  background: rgba(15, 23, 42, 0.72);
+
+  backdrop-filter: blur(14px);
+  -webkit-backdrop-filter: blur(14px);
+
+  border-bottom: 1px solid rgba(255,255,255,0.08);
+}
+
+/* =========================
+   LOGO
+========================= */
+
+.logo {
+  font-size: 24px;
+  font-weight: 700;
+
+  color: #38bdf8;
+
+  letter-spacing: 1px;
+}
+
+/* =========================
+   NAV LINKS
+========================= */
+
+.nav-links {
+  display: flex;
+  gap: 34px;
+}
+
+/* links */
+
+.nav-links a {
+  position: relative;
+
+  text-decoration: none;
+
+  color: #cbd5e1;
+
+  font-size: 15px;
+  font-weight: 500;
+
+  padding-bottom: 6px;
+
+  transition: color 0.3s ease;
+}
+
+/* hover */
+
+.nav-links a:hover {
+  color: #38bdf8;
+}
+
+/* ✨ animated underline */
+
+.nav-links a::after {
+  content: '';
+
+  position: absolute;
+
+  left: 50%;
+  bottom: 0;
+
+  width: 0%;
+  height: 2px;
+
+  background: #38bdf8;
+
+  border-radius: 10px;
+
+  transition:
+    width 0.3s ease,
+    left 0.3s ease;
+}
+
+/* hover underline animation */
+
+.nav-links a:hover::after {
+  width: 100%;
+  left: 0;
+}
+
+/* ACTIVE LINK */
+
+.nav-links a.active {
+  color: #38bdf8;
+}
+
+.nav-links a.active::after {
+  width: 100%;
+  left: 0;
+}
+
+/* =========================
+   PAGE
+========================= */
+
+
+.page {
+  min-height: 100%;
+  padding-top: 90px;
+  background: #0f172a;
+}
+/* =========================
+   RESPONSIVE FIX (ONLY ADD)
+========================= */
+
+/* Tablet */
+@media (max-width: 1024px) {
+  .navbar {
+    padding: 0 20px;
+  }
+
+  .nav-links {
+    gap: 20px;
+  }
+
+  .logo {
+    font-size: 20px;
+  }
+}
+
+/* Mobile */
+@media (max-width: 768px) {
+
+  .navbar {
+    padding: 0 16px;
+    height: 64px;
+  }
+
+  .logo {
+    font-size: 18px;
+  }
+
+  .nav-links {
+    gap: 16px;
+  }
+
+  .nav-links a {
+    font-size: 14px;
+  }
+}
+
+/* Small mobile */
+@media (max-width: 480px) {
+
+  .navbar {
+    padding: 0 12px;
+  }
+
+  .logo {
+    font-size: 16px;
+  }
+
+  .nav-links {
+    gap: 10px;
+  }
+
+  .nav-links a {
+    font-size: 13px;
+  }
+}
+/* =========================
+   LOGO
+========================= */
+
+.navbar {
+  padding: 0 25px;
+}
+.logo-center {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.logo-center img {
+  height: 42px;
+  width: auto;
+  object-fit: contain;
+
+  transition: 0.3s ease;
+
+  /* افکت شیک */
+  filter: drop-shadow(0 0 10px rgba(255,255,255,0.25));
+}
+
+.logo-center img:hover {
+  transform: scale(1.08);
+}
