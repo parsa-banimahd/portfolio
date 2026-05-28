@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import {MatCard, MatCardActions, MatCardContent, MatCardHeader, MatCardTitle} from '@angular/material/card';
+import {MatCard, MatCardContent, MatCardHeader, MatCardTitle} from '@angular/material/card';
 
 @Component({
   selector: 'app-project-c',
@@ -7,8 +7,7 @@ import {MatCard, MatCardActions, MatCardContent, MatCardHeader, MatCardTitle} fr
     MatCard,
     MatCardHeader,
     MatCardTitle,
-    MatCardContent,
-    MatCardActions
+    MatCardContent
   ],
   templateUrl: './project-c.html',
   styleUrl: './project-c.css',
